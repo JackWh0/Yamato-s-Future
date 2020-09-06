@@ -2,7 +2,9 @@ let startScreen = document.querySelector("#start");
 let tutorialScreen = document.querySelector("#tutorial");
 let gameScreen = document.querySelector("#game");
 
-let answers = ['alert()']
+let questions = ['[Js] Selecione a função que mostra uma mensagem para o usuário',
+                '[Js] Selecione a função que mostra uma mensagem no console do browser'];
+let answers = ['alert()', 'console.log'];
 let i = 0;
 
 let screen = {
@@ -22,6 +24,18 @@ let screen = {
     },
     changeButtonValue: function (btn, txt) {
         btn.value = txt;
+    },
+    setStory: function (item) {
+        for (let i = 0; i < item.length; i++) {
+            item[i].classList.remove("question");
+            item[i].classList.add("story");
+        }
+    },
+    setQuestion: function (item) {
+        for (let i = 0; i < item.length; i++) {
+            item[i].classList.remove("story");
+            item[i].classList.add("question");
+        }
     }
 }
 
@@ -40,17 +54,26 @@ function startGame() {
 }
 
 function checkAnswer(btn) {
-    if (btn.value == answers[i]) {
-        showMessage(true)
-        i++;
-        changeOptions();
+    let itemType = document.querySelectorAll(".type");
+    let isQuestion = itemType[0].classList[4].indexOf("question") > -1;
+    
+    if (isQuestion) {
+        if (btn == answers[i]) {
+            showMessage(true)
+            i++;
+            screen.setStory(itemType);
+            showStory(btn)
+        }
+        else {
+            showMessage(false)
+        }
+    } else {
+        showQuestion(btn);
     }
-    // else {
-    //     showMessage(false)
-    // }
 }
 
-function changeOptions() {
+function showStory(choice) {
+    alert('your choice was: ' + choice)
     let message1 = document.querySelector("#message1");
     let message2 = document.querySelector("#message2");
     let cardTitle = document.querySelector("#card-title");
@@ -58,15 +81,19 @@ function changeOptions() {
     let cardImage = document.querySelector('#card-image');
     let btn1 = document.querySelector("#btn1");
     let btn2 = document.querySelector("#btn2");
+    let itemType = document.querySelector("#info-type");
 
-    setTimeout(screen.changeText, 2000, message1, 'Decisão liberada!');
-    setTimeout(screen.changeCardImage, 2000, cardImage, 'https://i.imgur.com/jYHn5fl.png');
-    setTimeout(screen.changeText, 2000, cardTitle, 'Yamato conseguiu hackear!');
-    setTimeout(screen.changeText, 2000, message2, 'Selecione o que quer fazer:');
-    setTimeout(screen.changeText, 2000, cardText, 'O governo dos EUA viu potêncial e espalhou nos noticiarios que o Yamato pode trabalhar p/ eles.' +
-        ' Caso rejeite, entrará pra lista dos mais procurados do mundo!');
-    setTimeout(screen.changeButtonValue, 2000, btn1, 'Aceitar emprego');
-    setTimeout(screen.changeButtonValue, 2000, btn2, 'Rejeitar emprego');
+    setTimeout(screen.changeText, 2000, message1, story[0].msg1);
+    setTimeout(screen.changeCardImage, 2000, cardImage, story[0].cardImg);
+    setTimeout(screen.changeText, 2000, cardTitle, story[0].cardTitle);
+    setTimeout(screen.changeText, 2000, message2, story[0].msg2);
+    setTimeout(screen.changeText, 2000, cardText, story[0].cardTxt);
+    setTimeout(screen.changeButtonValue, 2000, btn1, story[0].opt1);
+    setTimeout(screen.changeButtonValue, 2000, btn2, story[0].opt2);
+}
+
+function showQuestion(choice) {
+    alert('your choice was: ' + choice)
 }
 
 function showMessage(acertou) {
