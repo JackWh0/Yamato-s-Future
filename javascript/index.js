@@ -1,9 +1,11 @@
 let startScreen = document.querySelector("#start");
 let tutorialScreen = document.querySelector("#tutorial");
-let gameScreen = document.querySelector("#game");
+let gameScreen = document.querySelector("#game_question");
+let resumeScreen = document.querySelector("#resume");
+let questionScreen = document.querySelector("#question");
 
 let questions = ['[Js] Selecione a função que mostra uma mensagem para o usuário',
-                '[Js] Selecione a função que mostra uma mensagem no console do browser'];
+    '[Js] Selecione a função que mostra uma mensagem no console do browser'];
 let answers = ['alert()', 'console.log'];
 let i = 0;
 
@@ -42,7 +44,7 @@ let screen = {
 function showTutorial() {
     let startTxt = document.querySelector("#startTxt").value;
 
-    if (startTxt.toLowerCase().indexOf("start") > -1) {
+    if (startTxt.toLowerCase().includes("start")) {
         screen.hide(startScreen);
         screen.show(tutorialScreen);
     }
@@ -53,27 +55,23 @@ function startGame() {
     screen.show(gameScreen);
 }
 
-function checkAnswer(btn) {
-    let itemType = document.querySelectorAll(".type");
-    let isQuestion = itemType[0].classList[4].indexOf("question") > -1;
-    
-    if (isQuestion) {
-        if (btn == answers[i]) {
-            showMessage(true)
-            i++;
-            screen.setStory(itemType);
-            showStory(btn)
-        }
-        else {
-            showMessage(false)
-        }
-    } else {
-        showQuestion(btn);
+function checkAnswer() {
+    let answer = document.querySelector("#answerTxt");
+
+    if (answer.value.includes(answers[i])) {
+        showMessage(true)
+        i++;
+        screen.hide(questionScreen)
+        showStory()
+    }
+    else {
+        showMessage(false)
     }
 }
 
-function showStory(choice) {
-    alert('your choice was: ' + choice)
+function showStory() {
+    //alert('your choice was: ' + choice)
+    let gameChoice = document.querySelector("#game_choice")
     let message1 = document.querySelector("#message1");
     let message2 = document.querySelector("#message2");
     let cardTitle = document.querySelector("#card-title");
@@ -81,15 +79,15 @@ function showStory(choice) {
     let cardImage = document.querySelector('#card-image');
     let btn1 = document.querySelector("#btn1");
     let btn2 = document.querySelector("#btn2");
-    let itemType = document.querySelector("#info-type");
 
-    setTimeout(screen.changeText, 2000, message1, story[0].msg1);
-    setTimeout(screen.changeCardImage, 2000, cardImage, story[0].cardImg);
-    setTimeout(screen.changeText, 2000, cardTitle, story[0].cardTitle);
-    setTimeout(screen.changeText, 2000, message2, story[0].msg2);
-    setTimeout(screen.changeText, 2000, cardText, story[0].cardTxt);
-    setTimeout(screen.changeButtonValue, 2000, btn1, story[0].opt1);
-    setTimeout(screen.changeButtonValue, 2000, btn2, story[0].opt2);
+    screen.show(gameChoice)
+    screen.changeText(message1, story[0].msg1);
+    screen.changeCardImage(cardImage, story[0].cardImg);
+    screen.changeText(cardTitle, story[0].cardTitle);
+    screen.changeText(message2, story[0].msg2)
+    screen.changeButtonValue(btn1, story[0].opt1);
+    screen.changeButtonValue(btn2, story[0].opt2);
+    screen.changeText(cardText, story[0].cardTxt);
 }
 
 function showQuestion(choice) {
@@ -103,7 +101,12 @@ function showMessage(acertou) {
     if (acertou) {
         screen.changeText(result, 'Acertou! xD');
     } else {
-        screen.changeText(result, 'Errou! :P');
+        screen.changeText(result, `Dica: Em funções, use os parênteses para a resposta ser reconhecida! :P`);
     }
     setTimeout(screen.hide, 2000, result)
+}
+
+function hideResume() {
+    screen.hide(resumeScreen);
+    screen.show(questionScreen);
 }
