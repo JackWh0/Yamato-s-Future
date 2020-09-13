@@ -53,27 +53,78 @@
             </div>
         </div>
     </div>
-    <div class="container mt-5 hide" id="game">
+    <div class="container mt-5 hide" id="game_question">
+        <div class="container">
+            <div id="resume">
+                <div class="row mt-4 d-flex justify-content-center">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="https://i.imgur.com/SLntno4.png"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">29/11/2032 - Em algum lugar do Japão...</h5>
+                            <p class="card-text text-justify">Yamato está em seu quarto tentando hackear
+                                informações
+                                secretas da área 51 sobre alienigenas.</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 d-flex justify-content-center mt-4 mb-5">
+                        <input class="btn btn-outline-info w-75 type question" type="button"
+                            value="Continuar" onclick="hideResume()">
+                    </div>
+                </div>
+            </div>
+            <div id="question" class="hide">
+                <div class="row d-flex justify-content-center">
+                    <h6 class="text-danger text-center mt-4" id="message1">PERGUNTA</h6>
+                </div>
+                <div class="row d-flex justify-content-center mt-5">
+                    <h5 class="text-white text-justify" id="message2">[JS] Digite o nome da função que mostra uma mensagem
+                        na tela do
+                        usuário</h5>
+                </div>
+                <div class="row mt-3 d-flex justify-content-center">
+                    <figure>
+                        <figcaption class="text-center text-muted">Exemplo</figcaption>
+                        <img src="https://i.imgur.com/GEzcVtW.png" class="img-fluid">
+                    </figure>
+                </div>
+                
+                <div class="row mt-4">
+                    <div class="container">
+                        <div class="col-sm-12 d-flex justify-content-center mt-2">
+                            <span class="hide text-center text-warning" id="result"></span>
+                        </div>
+                        <div class="col-sm-12 d-flex justify-content-center mt-2">
+                            <input type="text" id="answerTxt" class="bg-dark text-white w-75 text-monospace"
+                                value="[Hack@Har ~]$ ">
+                        </div>
+                        <div class="col-sm-12 d-flex justify-content-center mt-2 mb-5">
+                            <input class="btn btn-outline-info w-75 type question" type="button" id="btnContinue"
+                                value="Continuar" onclick="checkAnswer(this.value)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5 hide" id="game_choice">
         <div class="container">
             <div class="row d-flex justify-content-center">
-                <h6 class="text-danger text-center mt-4" id="message1">Responda corretamente para liberar a decisão!
-                </h6>
+                <h6 class="text-danger text-center mt-4" id="message1">Hora de escolher!</h6>
             </div>
             <div class="row mt-3 d-flex justify-content-center">
                 <div class="card" style="width: 18rem;">
                     <img class="card-img-top" id="card-image" src="https://i.imgur.com/SLntno4.png"
                         alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title text-center" id="card-title">29/11/2032 - Em algum lugar do Japão...</h5>
-                        <p class="card-text text-justify" id="card-text">Yamato está em seu quarto tentando hackear
-                            informações
-                            secretas da área 51.</p>
+                        <h5 class="card-title text-center" id="card-title"></h5>
+                        <p class="card-text text-justify" id="card-text"></p>
                     </div>
                 </div>
             </div>
             <div class="row d-flex justify-content-center mt-5">
-                <h5 class="text-white text-justify" id="message2">[Js] Selecione a função que mostra uma mensagem para o
-                    usuário</h5>
+                <h5 class="text-white text-justify" id="message2">Qual sua decisão?</h5>
             </div>
             <div class="row">
                 <div class="container">
