@@ -3,10 +3,8 @@ let tutorialScreen = document.querySelector("#tutorial");
 let gameScreen = document.querySelector("#game_question");
 let resumeScreen = document.querySelector("#resume");
 let questionScreen = document.querySelector("#question");
+let gameChoiceScreen = document.querySelector("#game_choice")
 
-let questions = ['[Js] Selecione a função que mostra uma mensagem para o usuário',
-    '[Js] Selecione a função que mostra uma mensagem no console do browser'];
-let answers = ['alert()', 'console.log'];
 let i = 0;
 
 let screen = {
@@ -58,36 +56,52 @@ function startGame() {
 function checkAnswer() {
     let answer = document.querySelector("#answerTxt");
 
-    if (answer.value.includes(answers[i])) {
+    console.log(questions[i]);
+    if (answer.value.includes(questions[i].questionAnswer)) {
         showMessage(true)
+        screen.hide(questionScreen);
+        screen.changeButtonValue(answer, '[Hack@Har ~]$ ')
+        showStory(stories[i])
         i++;
-        screen.hide(questionScreen)
-        showStory()
     }
     else {
         showMessage(false)
     }
 }
 
-function showStory() {
-    //alert('your choice was: ' + choice)
-    let gameChoice = document.querySelector("#game_choice")
-    let message1 = document.querySelector("#message1");
-    let message2 = document.querySelector("#message2");
+function chooseOption(opt){
+    continueStory(choices.get(opt));
+    screen.hide(gameChoiceScreen);
+    screen.show(resumeScreen)
+}
+
+function continueStory(story){
+    let continueTitle = document.querySelector("#continueTitle");
+    let continueText = document.querySelector("#continueText");
+    let continueImage = document.querySelector("#continueImage");
+    let questionMessage = document.querySelector("#questionMessage");
+    let questionImage = document.querySelector("#questionImage");
+
+    screen.changeText(questionMessage, questions[i].questionMessage);
+    screen.changeCardImage(questionImage, questions[i].questionImage);
+    screen.changeCardImage(continueImage, story.continueImage);
+    screen.changeText(continueTitle, story.continueTitle)
+    screen.changeText(continueText, story.continueText)
+}
+
+function showStory(story) {
     let cardTitle = document.querySelector("#card-title");
     let cardText = document.querySelector("#card-text");
     let cardImage = document.querySelector('#card-image');
     let btn1 = document.querySelector("#btn1");
     let btn2 = document.querySelector("#btn2");
 
-    screen.show(gameChoice)
-    screen.changeText(message1, story[0].msg1);
-    screen.changeCardImage(cardImage, story[0].cardImg);
-    screen.changeText(cardTitle, story[0].cardTitle);
-    screen.changeText(message2, story[0].msg2)
-    screen.changeButtonValue(btn1, story[0].opt1);
-    screen.changeButtonValue(btn2, story[0].opt2);
-    screen.changeText(cardText, story[0].cardTxt);
+    screen.show(gameChoiceScreen)
+    screen.changeCardImage(cardImage, story.cardImg);
+    screen.changeText(cardTitle, story.cardTitle);
+    screen.changeButtonValue(btn1, story.opt1);
+    screen.changeButtonValue(btn2, story.opt2);
+    screen.changeText(cardText, story.cardTxt);
 }
 
 function showQuestion(choice) {

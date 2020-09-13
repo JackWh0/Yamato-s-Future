@@ -23,7 +23,7 @@
                 <p class="mb-3 text-monospace text-danger">Digite 'start' abaixo para jogar.</p>
             </div>
             <div class="row mt-4 d-flex justify-content-center">
-                <input type="text" id="startTxt" class="bg-dark text-white w-75 text-monospace" value="[Hacker@Har ~]$"
+                <input type="text" id="startTxt" class="bg-dark text-white w-75 text-monospace" value="[Hacker@Har ~]$ "
                     onkeyup="showTutorial()">
             </div>
         </div>
@@ -59,10 +59,10 @@
                 <div class="row mt-4 d-flex justify-content-center">
                     <div class="card" style="width: 18rem;">
                         <img class="card-img-top" src="https://i.imgur.com/SLntno4.png"
-                            alt="Card image cap">
+                            alt="Card image cap" id="continueImage">
                         <div class="card-body">
-                            <h5 class="card-title text-center">29/11/2032 - Em algum lugar do Japão...</h5>
-                            <p class="card-text text-justify">Yamato está em seu quarto tentando hackear
+                            <h5 class="card-title text-center" id="continueTitle">29/11/2032 - Em algum lugar do Japão...</h5>
+                            <p class="card-text text-justify" id="continueText">Yamato está em seu quarto tentando hackear
                                 informações
                                 secretas da área 51 sobre alienigenas.</p>
                         </div>
@@ -75,17 +75,17 @@
             </div>
             <div id="question" class="hide">
                 <div class="row d-flex justify-content-center">
-                    <h6 class="text-danger text-center mt-4" id="message1">PERGUNTA</h6>
+                    <h6 class="text-danger text-center mt-4">PERGUNTA</h6>
                 </div>
                 <div class="row d-flex justify-content-center mt-5">
-                    <h5 class="text-white text-justify" id="message2">[JS] Digite o nome da função que mostra uma mensagem
+                    <h5 class="text-white text-justify" id="questionMessage">[JS] Digite o nome da função que mostra uma mensagem
                         na tela do
                         usuário</h5>
                 </div>
                 <div class="row mt-3 d-flex justify-content-center">
                     <figure>
                         <figcaption class="text-center text-muted">Exemplo</figcaption>
-                        <img src="https://i.imgur.com/GEzcVtW.png" class="img-fluid">
+                        <img src="https://i.imgur.com/GEzcVtW.png" class="img-fluid" id="questionImage">
                     </figure>
                 </div>
                 
@@ -99,8 +99,8 @@
                                 value="[Hack@Har ~]$ ">
                         </div>
                         <div class="col-sm-12 d-flex justify-content-center mt-2 mb-5">
-                            <input class="btn btn-outline-info w-75 type question" type="button" id="btnContinue"
-                                value="Continuar" onclick="checkAnswer(this.value)">
+                            <input class="btn btn-outline-info w-75" type="button" id="btnContinue"
+                                value="Continuar" onclick="checkAnswer()">
                         </div>
                     </div>
                 </div>
@@ -111,7 +111,7 @@
     <div class="container mt-5 hide" id="game_choice">
         <div class="container">
             <div class="row d-flex justify-content-center">
-                <h6 class="text-danger text-center mt-4" id="message1">Hora de escolher!</h6>
+                <h6 class="text-danger text-center mt-4">Hora de escolher!</h6>
             </div>
             <div class="row mt-3 d-flex justify-content-center">
                 <div class="card" style="width: 18rem;">
@@ -124,20 +124,17 @@
                 </div>
             </div>
             <div class="row d-flex justify-content-center mt-5">
-                <h5 class="text-white text-justify" id="message2">Qual sua decisão?</h5>
+                <h5 class="text-white text-justify">Qual sua decisão?</h5>
             </div>
             <div class="row">
                 <div class="container">
                     <div class="col-sm-12 d-flex justify-content-center mt-2">
-                        <span class="hide text-center text-warning" id="result"></span>
-                    </div>
-                    <div class="col-sm-12 d-flex justify-content-center mt-2">
-                        <input class="btn btn-outline-info w-75 type question" type="button" id="btn1" value="indexOf()"
-                            onclick="checkAnswer(this.value)">
+                        <input class="btn btn-outline-info w-75" type="button" id="btn1"
+                            onclick="chooseOption(this.value)">
                     </div>
                     <div class="col-sm-12 d-flex justify-content-center mt-2 mb-5">
-                        <input class="btn btn-outline-info w-75 type question" type="button" id="btn2" value="alert()"
-                            onclick="checkAnswer(this.value)">
+                        <input class="btn btn-outline-info w-75" type="button" id="btn2"
+                            onclick="chooseOption(this.value)">
                     </div>
                 </div>
             </div>
