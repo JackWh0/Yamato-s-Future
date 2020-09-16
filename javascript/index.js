@@ -4,6 +4,7 @@ let gameScreen = document.querySelector("#game_question");
 let resumeScreen = document.querySelector("#resume");
 let questionScreen = document.querySelector("#question");
 let gameChoiceScreen = document.querySelector("#game_choice")
+let currentChoice = '';
 
 let i = 0;
 
@@ -56,12 +57,12 @@ function startGame() {
 function checkAnswer() {
     let answer = document.querySelector("#answerTxt");
 
-    console.log(questions[i]);
-    if (answer.value.includes(questions[i].questionAnswer)) {
+    if (answer.value.toLowerCase().includes(questions[i].questionAnswer)) {
         showMessage(true)
         screen.hide(questionScreen);
         screen.changeButtonValue(answer, '[Hack@Har ~]$ ')
-        showStory(stories[i])
+        
+        showStory(choices.get(currentChoice))
         i++;
     }
     else {
@@ -70,9 +71,14 @@ function checkAnswer() {
 }
 
 function chooseOption(opt){
+    if(choices.get(opt)=='exit'){
+        location.reload();
+    }
+    
     continueStory(choices.get(opt));
     screen.hide(gameChoiceScreen);
     screen.show(resumeScreen)
+    currentChoice = opt;
 }
 
 function continueStory(story){
@@ -85,7 +91,7 @@ function continueStory(story){
     screen.changeText(questionMessage, questions[i].questionMessage);
     screen.changeCardImage(questionImage, questions[i].questionImage);
     screen.changeCardImage(continueImage, story.continueImage);
-    screen.changeText(continueTitle, story.continueTitle)
+    screen.changeText(continueTitle, story.continueTitle);
     screen.changeText(continueText, story.continueText)
 }
 
