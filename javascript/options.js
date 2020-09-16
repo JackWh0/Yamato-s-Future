@@ -68,21 +68,81 @@ let stories = [
         cardImg: 'https://i.imgur.com/q9bFY2X.png',
         cardTitle: 'Game Over!',
         cardTxt: 'Sua história termina aqui...! Mas existem outros finais para ver xD! Neste final, Yamato conseguiu parar' +
-            " a guerra e foi o único capaz de controlar os robôs. Sendo, mais tarde, considerado um gênio por suas contribuições "+
+            " a guerra e foi o único capaz de controlar os robôs. Sendo, mais tarde, considerado um gênio por suas contribuições " +
             "à área da inteligência artificial.",
         opt1: 'Reiniciar jogo',
         opt2: 'Sair'
     },
     {
         continueTitle: 'Yamato não sabotou o projeto',
-        continueText: 'Graças a você, a inteligência artificial dada aos robôs se tornou submissa apenas ao governo dos EUA, '+
-                        'e o resto do mundo foi dominado pelo poder de fogo deles. Agora, os EUA finalmente conquistaram a dominação mundial!',
+        continueText: 'Graças a você, a inteligência artificial dada aos robôs se tornou submissa apenas ao governo dos EUA, ' +
+            'e o resto do mundo foi dominado pelo poder de fogo deles. Agora, os EUA finalmente conquistaram a dominação mundial!',
         continueImage: 'https://i.imgur.com/L6LGQ6l.png',
         cardImg: 'https://i.imgur.com/q9bFY2X.png',
         cardTitle: 'Game Over!',
-        cardTxt: 'Sua história termina aqui...! Mas existem outros finais para ver xD! Neste final, Yamato foi frio e seguiu ordens '+
-                    'sem questionar. Como consequência, os EUA venceu a guerra e conquistou a dominação mundial. Yamato viveu pelo resto da vida sem '+
-                    'amigos e sendo ignorado por todos por conta de suas decisões.',
+        cardTxt: 'Sua história termina aqui...! Mas existem outros finais para ver xD! Neste final, Yamato foi frio e seguiu ordens ' +
+            'sem questionar. Como consequência, os EUA venceu a guerra e conquistou a dominação mundial. Yamato viveu pelo resto da vida sem ' +
+            'amigos e sendo ignorado por todos por conta de suas decisões.',
+        opt1: 'Reiniciar jogo',
+        opt2: 'Sair'
+    },
+    {
+        continueTitle: '10/12/2032 - Base secreta nos EUA',
+        continueText: 'Yamato revelou os planos dos EUA e a opinião pública se divide entre acreditar ou não.',
+        continueImage: 'https://i.imgur.com/q9bFY2X.png',//imagem provisoria
+        cardImg: 'https://i.imgur.com/q9bFY2X.png',//imagem provisoria
+        cardTitle: 'Desobedeceu a ordem de liderar o projeto!',
+        cardTxt: 'Os EUA não confiam mais no Yamato, e agora querem o sentenciar à morte. Porém, ele consegue ' +
+            'passar despercebido pelos guardas e consegue uma chance de fugir.',
+        opt1: 'Fugir',
+        opt2: 'Ficar'
+    },
+    {
+        continueTitle: '10/12/2032 - Nave Alienigena',
+        continueText: 'Após sair de dentro da base secreta, Yamato foi abduzido por aliens como uma tentativa de resgate. ',
+        continueImage: 'https://i.imgur.com/q9bFY2X.png',//imagem provisoria
+        cardImg: 'https://i.imgur.com/q9bFY2X.png',//imagem provisoria
+        cardTitle: 'Abduzido por aliens!',
+        cardTxt: 'Por admiração de ter evitado uma guerra e por sua inteligência avançada, eles o oferecem a oportunidade de viajar ' +
+            ' pelo espaço e aprender mais sobre a cultura de outros seres.',
+        opt1: 'Viajar pelo espaço',
+        opt2: 'Voltar para a terra'
+    },
+    {
+        continueTitle: 'Evolução da espécie',
+        continueText: 'Após aceitar viajar com os aliens, Yamato passou anos adquirindo conhecimento, até que em certo ponto, evoluiu ' +
+            'para um novo tipo de ser humano! ',
+        continueImage: 'https://i.imgur.com/q9bFY2X.png',//imagem provisoria
+        cardImg: 'https://i.imgur.com/q9bFY2X.png',//imagem provisoria
+        cardTitle: 'Game Over!',
+        cardTxt: 'Sua história termina aqui...! Mas existem outros finais para ver xD! Neste final, Yamato passou anos adquirindo conhecimento ' +
+            'em suas viagens estelares e evoluiu para um novo tipo de ser humano! Agora, ele possui olhos que veem tudo como uma grande ' +
+            'sequência de códigos, e com sua mente, consegue os reescrever se assim desejar. Com este poder, ele salvou diversos planetas e galáxias.',
+        opt1: 'Reiniciar jogo',
+        opt2: 'Sair'
+    },
+    {
+        continueTitle: 'Considerado herói!',
+        continueText: 'Após decidir voltar para a terra, os aliens te deixam em um lugar seguro e espalham provas de que você estava falando ' +
+            'a verdade.',
+        continueImage: 'https://i.imgur.com/q9bFY2X.png',//imagem provisoria
+        cardImg: 'https://i.imgur.com/q9bFY2X.png',//imagem provisoria
+        cardTitle: 'Game Over!',
+        cardTxt: 'Sua história termina aqui...! Mas existem outros finais para ver xD! Neste final, Yamato foi considerado um herói pela sua ' +
+            'coragem de revelar segredos que colocaram sua vida em risco, e inaugurou sua própria empresa de segurança cibernética. Com ' +
+            'sua fama, ele conseguiu muitos clientes e logo se tornou uma das pessoas mais ricas do planeta!',
+        opt1: 'Reiniciar jogo',
+        opt2: 'Sair'
+    },
+    {
+        continueTitle: 'EUA - Prisão de segurança máxima',
+        continueText: 'Yamato decidiu não fugir, e foi enviado para uma prisão de segurança máxima.',
+        continueImage: 'https://i.imgur.com/q9bFY2X.png',//imagem provisoria
+        cardImg: 'https://i.imgur.com/q9bFY2X.png',//imagem provisoria
+        cardTitle: 'Game Over!',
+        cardTxt: 'Sua história termina aqui...! Mas existem outros finais para ver xD! Neste final, você decidiu que Yamato deveria enfrentar sua '+
+                'sentença, e por isso, ele foi enviado a uma prisão de segurança máxima. Só que em vez de pena de morte, ele foi condenado a ficar '+
+                'preso pelo resto da vida em uma sela pequena e sem contato com outros humanos.',
         opt1: 'Reiniciar jogo',
         opt2: 'Sair'
     }
@@ -102,6 +162,16 @@ let choices = {
                 return stories[3];
             case 'Não Sabotar Projeto':
                 return stories[4];
+            case 'Desobedecer':
+                return stories[5];
+            case 'Fugir':
+                return stories[6];
+            case 'Viajar pelo espaço':
+                return stories[7];
+            case 'Voltar para a terra':
+                return stories[8];
+            case 'Ficar':
+                return stories[9];
             default:
                 return stories[0];
 

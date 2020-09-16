@@ -61,7 +61,7 @@ function checkAnswer() {
         showMessage(true)
         screen.hide(questionScreen);
         screen.changeButtonValue(answer, '[Hack@Har ~]$ ')
-        
+
         showStory(choices.get(currentChoice))
         i++;
     }
@@ -70,18 +70,18 @@ function checkAnswer() {
     }
 }
 
-function chooseOption(opt){
-    if(choices.get(opt)=='exit'){
+function chooseOption(opt) {
+    if (choices.get(opt) == 'exit') {
         location.reload();
+    } else {
+        continueStory(choices.get(opt));
+        screen.hide(gameChoiceScreen);
+        screen.show(resumeScreen)
+        currentChoice = opt;
     }
-    
-    continueStory(choices.get(opt));
-    screen.hide(gameChoiceScreen);
-    screen.show(resumeScreen)
-    currentChoice = opt;
 }
 
-function continueStory(story){
+function continueStory(story) {
     let continueTitle = document.querySelector("#continueTitle");
     let continueText = document.querySelector("#continueText");
     let continueImage = document.querySelector("#continueImage");
