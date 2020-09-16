@@ -140,9 +140,117 @@ let stories = [
         continueImage: 'https://i.imgur.com/q9bFY2X.png',//imagem provisoria
         cardImg: 'https://i.imgur.com/q9bFY2X.png',//imagem provisoria
         cardTitle: 'Game Over!',
-        cardTxt: 'Sua história termina aqui...! Mas existem outros finais para ver xD! Neste final, você decidiu que Yamato deveria enfrentar sua '+
-                'sentença, e por isso, ele foi enviado a uma prisão de segurança máxima. Só que em vez de pena de morte, ele foi condenado a ficar '+
-                'preso pelo resto da vida em uma sela pequena e sem contato com outros humanos.',
+        cardTxt: 'Sua história termina aqui...! Mas existem outros finais para ver xD! Neste final, você decidiu que Yamato deveria enfrentar sua ' +
+            'sentença, e por isso, ele foi enviado a uma prisão de segurança máxima. Só que em vez de pena de morte, ele foi condenado a ficar ' +
+            'preso pelo resto da vida em uma sela pequena e sem contato com outros humanos.',
+        opt1: 'Reiniciar jogo',
+        opt2: 'Sair'
+    },
+    {
+        continueTitle: "30/11/2032 - Cafeteria",
+        continueText: 'Após rejeitar a propósta dos EUA, Yamato sabe que está na lista dos mais procurados do mundo.',
+        continueImage: 'https://i.imgur.com/q9bFY2X.png',//imagem provisoria
+        cardImg: 'https://i.imgur.com/q9bFY2X.png',//imagem provisoria
+        cardTitle: 'Rejeitou o trabalho!',
+        cardTxt: 'Yamato descobriu que foi denunciado por outro hacker, e que a polícia está a caminho de onde ele ' +
+            'está agora. Por ter um carro e conhecer bem as ruas onde mora, ele tem uma chance de tentar fugir!',
+        opt1: 'Esperar a polícia',
+        opt2: 'Fugir da polícia'
+    },
+    {
+        continueTitle: '02/12/2032 - Prisão nos EUA',
+        continueText: 'Após se entregar, Yamato foi preso e enviado para os EUA, onde foi recebido em uma prisão de segurança máxima.',
+        continueImage: 'https://i.imgur.com/q9bFY2X.png',//imagem provisoria
+        cardImg: 'https://i.imgur.com/q9bFY2X.png',//imagem provisoria
+        cardTitle: 'Esperando julgamento',
+        cardTxt: 'Já se passaram quatro meses, e Yamato conseguiu a confiança dos guardas, que pelo seu bom comportamento, ' +
+            'o deixam andar pela prisão livremente. Em um de seus passeios, ele vê um computador sem guardas por ' +
+            'perto, e tem a chance de hackear o sistema para ser liberado mais cedo.',
+        opt1: 'Hackear',
+        opt2: 'Não hackear'
+    },
+    {
+        continueTitle: 'Conseguiu acesso ao computador!',
+        continueText: 'Yamato está hackeando o sistema da prisão para mudar suas informações e diminuir sua sentença.',
+        continueImage: 'https://i.imgur.com/q9bFY2X.png',//imagem provisoria
+        cardImg: 'https://i.imgur.com/q9bFY2X.png',//imagem provisoria
+        cardTitle: 'Foi liberado!',
+        cardTxt: 'Por ser um gênio, Yamato hackeia o sistema da prisão facilmente e é liberado no dia seguinte. Por estar ' +
+            'tudo nos conformes, os guardas o liberam sem questionamentos. Agora, ele deve decidir se deve ou não se ' +
+            'vingar dos EUA por tudo que passou.',
+        opt1: 'Se vingar',
+        opt2: 'Não se vingar'
+    },
+    {
+        continueTitle: 'Vingança!',
+        continueText: 'Para se vingar, Yamato provoca um crash na bolsa de valores de New York, deixando o país na crise.',
+        continueImage: 'https://i.imgur.com/q9bFY2X.png',//imagem provisoria
+        cardImg: 'https://i.imgur.com/q9bFY2X.png',//imagem provisoria
+        cardTitle: 'Game Over!',
+        cardTxt: 'Sua história termina aqui...! Mas existem outros finais para ver xD! Neste final, Yamato foi capturado ' +
+            'e preso pelos EUA, mas conseguiu fugir e se vingar radicalmente! Após isso, ele mudou sua identidade para ' +
+            'não ser mais reconhecido e desde então, não foi mais visto...',
+        opt1: 'Reiniciar jogo',
+        opt2: 'Sair'
+    },
+    {
+        continueTitle: 'Não se vingou!',
+        continueText: 'Yamato aprendeu desde cedo que a vingança nunca é plena, mata a alma e a envenena. E deixou o passado para trás.',
+        continueImage: 'https://i.imgur.com/q9bFY2X.png',//imagem provisoria
+        cardImg: 'https://i.imgur.com/q9bFY2X.png',//imagem provisoria
+        cardTitle: 'Game Over!',
+        cardTxt: 'Sua história termina aqui...! Mas existem outros finais para ver xD! Neste final, Yamato não se vingou dos EUA e ' +
+            'mudou de identidade após sair da prisão. Após alguns anos, ele criou um aplicativo revolucionário e se tornou extremamente ' +
+            'rico.',
+        opt1: 'Reiniciar jogo',
+        opt2: 'Sair'
+    },
+    {
+        continueTitle: 'Liberado!',
+        continueText: 'Yamato cumpriu sua sentença e após alguns anos, foi liberado.',
+        continueImage: 'https://i.imgur.com/q9bFY2X.png',//imagem provisoria
+        cardImg: 'https://i.imgur.com/q9bFY2X.png',//imagem provisoria
+        cardTitle: 'Game Over!',
+        cardTxt: 'Sua história termina aqui...! Mas existem outros finais para ver xD! Neste final, você decidiu que Yamato não deveria ' +
+            'hackear o sistema. Porém, após ser visto por um dos guardas perto do computador, ele foi obrigado a retornar a retornar a ' +
+            'sua cela e passou a ser tratado como perigoso pelo resto de seus dias na prisão. Após alguns anos, ele foi liberado.',
+        opt1: 'Reiniciar jogo',
+        opt2: 'Sair'
+    },
+    {
+        continueTitle: 'Perseguição!',
+        continueText: 'Durante a fuga, Yamato começa a ser perseguido pela polícia!',
+        continueImage: 'https://i.imgur.com/q9bFY2X.png',//imagem provisoria
+        cardImg: 'https://i.imgur.com/q9bFY2X.png',//imagem provisoria
+        cardTitle: 'Fuga perigosa',
+        cardTxt: 'Agora que está sendo perseguido pela polícia, Yamato deve pensar de forma rápida como despistá-los. ' +
+            'Após alguns segundos, ele se pergunta se conseguiria fazer uma manobra que o tiraria da estrada.',
+        opt1: 'Fazer manobra',
+        opt2: 'Não fazer manobra'
+    },
+    {
+        continueTitle: 'Manobra radical!',
+        continueText: 'Após fazer a manobra, o carro capotou e o Yamato foi preso!',
+        continueImage: 'https://i.imgur.com/q9bFY2X.png',//imagem provisoria
+        cardImg: 'https://i.imgur.com/q9bFY2X.png',//imagem provisoria
+        cardTitle: 'Game Over!',
+        cardTxt: 'Sua história termina aqui...! Mas existem outros finais para ver xD! Neste final, você optou por fazer '+
+                'com que o Yamato fosse um dos mais procurados do mundo, e quase o matou em uma manobra durante a fuga. '+
+                'Felizmente, Yamato saiu sem machucados graves, mas foi preso em seguida pela polícia.',
+        opt1: 'Reiniciar jogo',
+        opt2: 'Sair'
+    },
+    {
+        continueTitle: 'Fuga impecável!',
+        continueText: 'Enquanto fugia, Yamato percebeu que a melhor alternativa para despistar os carros da polícia seria '+
+                        'batendo o carro.',
+        continueImage: 'https://i.imgur.com/q9bFY2X.png',//imagem provisoria
+        cardImg: 'https://i.imgur.com/q9bFY2X.png',//imagem provisoria
+        cardTitle: 'Game Over!',
+        cardTxt: 'Sua história termina aqui...! Mas existem outros finais para ver xD! Neste final, Yamato bateu o carro em uma árvore '+
+                'e o carro explodiu. Mas, o que a polícia não sabe, é que tudo isso foi uma distração para sua fuga. Explicação: Enquanto '+
+                'fazia uma curva, Yamato deixou um sapato pressionando o acelerador e pulou do carro em movimento. (Forjou a própria morte '+
+                'e fugiu!) ',
         opt1: 'Reiniciar jogo',
         opt2: 'Sair'
     }
@@ -172,9 +280,26 @@ let choices = {
                 return stories[8];
             case 'Ficar':
                 return stories[9];
+            case 'Rejeitar emprego':
+                return stories[10];
+            case 'Esperar a polícia':
+                return stories[11];
+            case 'Hackear':
+                return stories[12];
+            case 'Se vingar':
+                return stories[13];
+            case 'Não se vingar':
+                return stories[14];
+            case 'Não hackear':
+                return stories[15];
+            case 'Fugir da polícia':
+                return stories[16];
+            case 'Fazer manobra':
+                return stories[17];
+            case 'Não fazer manobra':
+                return stories[18];
             default:
                 return stories[0];
-
         }
     }
 }
