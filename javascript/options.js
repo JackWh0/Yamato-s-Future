@@ -2,7 +2,7 @@ let questions = [
     {
         questionMessage: '[JS] Digite o nome da função que mostra uma mensagem na tela do usuário',
         questionImage: 'https://i.imgur.com/GEzcVtW.png',
-        questionAnswer: 'alert()'
+        questionAnswer: 'alert'
     },
     {
         questionMessage: 'Qual termo em inglês usado para denominar partes físicas do computador?',
@@ -10,9 +10,9 @@ let questions = [
         questionAnswer: 'hardware'
     },
     {
-        questionMessage: '[Js] Qual função mostra uma mensagem no console do browser?',
+        questionMessage: '[Js] Quando quero mostrar uma mensagem no console do browser, eu uso...?',
         questionImage: 'https://i.imgur.com/mUunZB9.png',
-        questionAnswer: 'console.log()'
+        questionAnswer: 'console.log'
     },
     {
         questionMessage: '[Js] Qual propriedade de uma String é usada para ver o comprimento de uma palavra/frase?',
