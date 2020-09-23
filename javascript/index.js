@@ -121,7 +121,7 @@ function showMessage(acertou) {
     if (acertou) {
         screen.changeText(result, 'Acertou! xD');
     } else {
-        screen.changeText(result, `Dica: Em funções, use os parênteses para a resposta ser reconhecida! :P`);
+        screen.changeText(result, `Errou! :P`);
     }
     setTimeout(screen.hide, 2000, result)
 }
