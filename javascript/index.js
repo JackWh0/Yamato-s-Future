@@ -1,39 +1,39 @@
-let startScreen = document.querySelector("#start");
-let tutorialScreen = document.querySelector("#tutorial");
-let gameScreen = document.querySelector("#game_question");
-let resumeScreen = document.querySelector("#resume");
-let questionScreen = document.querySelector("#question");
-let gameChoiceScreen = document.querySelector("#game_choice")
-let currentChoice = '';
+const startScreen = document.querySelector("#start");
+const tutorialScreen = document.querySelector("#tutorial");
+const gameScreen = document.querySelector("#game_question");
+const resumeScreen = document.querySelector("#resume");
+const questionScreen = document.querySelector("#question");
+const gameChoiceScreen = document.querySelector("#game_choice");
 
+let currentChoice = '';
 let i = 0;
 
-let screen = {
-    show: function (item) {
+const screen = {
+    show: (item) => {
         item.classList.remove("hide");
         item.classList.add("show");
     },
-    hide: function (item) {
+    hide: (item) => {
         item.classList.remove("show");
         item.classList.add("hide");
     },
-    changeCardImage: function (item, img) {
+    changeCardImage: (item, img) => {
         item.src = img;
     },
-    changeText: function (item, message) {
+    changeText: (item, message) => {
         item.innerHTML = message;
     },
-    changeButtonValue: function (btn, txt) {
+    changeButtonValue: (btn, txt) => {
         btn.value = txt;
     },
-    setStory: function (item) {
-        for (let i = 0; i < item.length; i++) {
+    setStory: (item) => {
+        for (let i of item) {
             item[i].classList.remove("question");
             item[i].classList.add("story");
         }
     },
-    setQuestion: function (item) {
-        for (let i = 0; i < item.length; i++) {
+    setQuestion: (item) => {
+        for (let i of item) {
             item[i].classList.remove("story");
             item[i].classList.add("question");
         }
@@ -41,7 +41,7 @@ let screen = {
 }
 
 function showTutorial() {
-    let startTxt = document.querySelector("#startTxt").value;
+    const startTxt = document.querySelector("#startTxt").value;
 
     if (startTxt.toLowerCase().includes("start")) {
         screen.hide(startScreen);
@@ -55,7 +55,7 @@ function startGame() {
 }
 
 function checkAnswer() {
-    let answer = document.querySelector("#answerTxt");
+    const answer = document.querySelector("#answerTxt");
 
     if (answer.value.toLowerCase().includes(questions[i].questionAnswer)) {
         showMessage(true)
@@ -71,7 +71,7 @@ function checkAnswer() {
 }
 
 function chooseOption(opt) {
-    if (choices.get(opt) == 'exit') {
+    if (choices.get(opt) === 'exit') {
         location.reload();
     } else {
         continueStory(choices.get(opt));
@@ -82,11 +82,11 @@ function chooseOption(opt) {
 }
 
 function continueStory(story) {
-    let continueTitle = document.querySelector("#continueTitle");
-    let continueText = document.querySelector("#continueText");
-    let continueImage = document.querySelector("#continueImage");
-    let questionMessage = document.querySelector("#questionMessage");
-    let questionImage = document.querySelector("#questionImage");
+    const continueTitle = document.querySelector("#continueTitle");
+    const continueText = document.querySelector("#continueText");
+    const continueImage = document.querySelector("#continueImage");
+    const questionMessage = document.querySelector("#questionMessage");
+    const questionImage = document.querySelector("#questionImage");
 
     screen.changeText(questionMessage, questions[i].questionMessage);
     screen.changeCardImage(questionImage, questions[i].questionImage);
@@ -96,11 +96,11 @@ function continueStory(story) {
 }
 
 function showStory(story) {
-    let cardTitle = document.querySelector("#card-title");
-    let cardText = document.querySelector("#card-text");
-    let cardImage = document.querySelector('#card-image');
-    let btn1 = document.querySelector("#btn1");
-    let btn2 = document.querySelector("#btn2");
+    const cardTitle = document.querySelector("#card-title");
+    const cardText = document.querySelector("#card-text");
+    const cardImage = document.querySelector('#card-image');
+    const btn1 = document.querySelector("#btn1");
+    const btn2 = document.querySelector("#btn2");
 
     screen.show(gameChoiceScreen)
     screen.changeCardImage(cardImage, story.cardImg);
@@ -110,19 +110,13 @@ function showStory(story) {
     screen.changeText(cardText, story.cardTxt);
 }
 
-function showQuestion(choice) {
-    alert('your choice was: ' + choice)
-}
-
 function showMessage(acertou) {
-    let result = document.querySelector("#result");
-    screen.show(result);
+    const result = document.querySelector("#result");
+    const message = acertou ? 'Acertou! xD' : 'Errou! :P';
 
-    if (acertou) {
-        screen.changeText(result, 'Acertou! xD');
-    } else {
-        screen.changeText(result, `Errou! :P`);
-    }
+    screen.show(result);
+    screen.changeText(result, message);
+
     setTimeout(screen.hide, 2000, result)
 }
 

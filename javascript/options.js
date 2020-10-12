@@ -1,4 +1,4 @@
-let questions = [
+const questions = [
     {
         questionMessage: '[JS] Digite o nome da função que mostra uma mensagem na tela do usuário',
         questionImage: 'https://i.imgur.com/GEzcVtW.png',
@@ -26,7 +26,7 @@ let questions = [
     }
 ]
 
-let stories = [
+const stories = [
     {
         continueTitle: '29/11/2032 - Em algum lugar do Japão...',
         continueText: 'Yamato está em seu quarto tentando hackear informações secretas da área 51 sobre alienigenas.',
@@ -256,8 +256,8 @@ let stories = [
     }
 ]
 
-let choices = {
-    get: function (opt) {
+const choices = {
+    get: (opt) => {
         switch (opt) {
             case 'Reiniciar jogo':
             case 'Sair':
