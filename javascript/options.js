@@ -147,7 +147,7 @@ const choices = {
           cardTitle: 'Game Over!',
           cardTxt: 'Sua história termina aqui...! Mas existem outros finais para ver xD! Neste final, você decidiu que Yamato deveria enfrentar sua ' +
             'sentença, e por isso, ele foi enviado a uma prisão de segurança máxima. Só que em vez de pena de morte, ele foi condenado a ficar ' +
-            'preso pelo resto da vida em uma sela pequena e sem contato com outros humanos.',
+            'preso pelo resto da vida em uma cela pequena e sem contato com outros humanos.',
           opt1: 'Reiniciar jogo',
           opt2: 'Sair'
         };
