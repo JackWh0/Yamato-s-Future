@@ -25,18 +25,6 @@ const screen = {
   },
   changeButtonValue: (btn, txt) => {
     btn.value = txt;
-  },
-  setStory: (item) => {
-    for (let i of item) {
-      item[i].classList.remove("question");
-      item[i].classList.add("story");
-    }
-  },
-  setQuestion: (item) => {
-    for (let i of item) {
-      item[i].classList.remove("story");
-      item[i].classList.add("question");
-    }
   }
 }
 
@@ -51,6 +39,7 @@ function showTutorial() {
 
 function startGame() {
   screen.hide(tutorialScreen);
+  continueStory(choices.get('start'));
   screen.show(gameScreen);
 }
 
