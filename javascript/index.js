@@ -113,3 +113,7 @@ function hideResume() {
   screen.hide(resumeScreen);
   screen.show(questionScreen);
 }
+
+function subir () {
+  window.scrollTo(0, 0);
+};

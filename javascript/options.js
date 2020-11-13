@@ -21,7 +21,7 @@ const questions = [
   },
   {
     questionMessage: 'Qual termo em inglês é usado para se referir a um erro não esperado nos códigos?',
-    questionImage: 'images/bug.png',
+    questionImage: 'images/bug.jpg',
     questionAnswer: 'bug'
   }
 ]

@@ -48,7 +48,8 @@
             </div>
             <div class="container">
                 <div class="row d-flex justify-content-center mt-3 mb-5">
-                    <input type="button" value="</Continuar>" / class="btn btn-light w-75" onclick="startGame()">
+                    <input type="button" value="</Continuar>" class="btn btn-light w-75 btn-continue"
+                        onclick="startGame(), subir()">
                 </div>
             </div>
         </div>
@@ -56,19 +57,25 @@
     <div class="container mt-5 hide" id="game_question">
         <div class="container">
             <div id="resume">
-                <div class="row mt-4 d-flex justify-content-center">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src=""
-                            alt="Card image cap" id="continueImage">
-                        <div class="card-body">
-                            <h5 class="card-title text-center" id="continueTitle"></h5>
-                            <p class="card-text text-justify" id="continueText"></p>
+                <div class="row d-flex justify-content-center mb-5">
+                    <h6 class="text-danger text-center mt-4">RESUMO</h6>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 text-center">
+                        <img class="card-img-top" src="" alt="Card image cap" id="continueImage">
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="container d-flex h-100 bg-text">
+                            <div class="row justify-content-center align-self-center">
+                                <h5 class="card-title text-center" id="continueTitle"></h5>
+                                <p class="card-text text-justify" id="continueText"></p>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-sm-12 d-flex justify-content-center mt-4 mb-5">
-                        <input class="btn btn-outline-info w-75 type question" type="button"
-                            value="Continuar" onclick="hideResume()">
-                    </div>
+                </div>
+                <div class="row mt-4 d-flex justify-content-center space">
+                    <input class="btn btn-outline-info w-50" id="btn-resume" type="button" value="Continuar"
+                        onclick="hideResume(), subir()">
                 </div>
             </div>
             <div id="question" class="hide">
@@ -84,19 +91,18 @@
                         <img src="" class="img-fluid" id="questionImage">
                     </figure>
                 </div>
-                
                 <div class="row mt-4">
                     <div class="container">
                         <div class="col-sm-12 d-flex justify-content-center mt-2">
                             <span class="hide text-center text-warning" id="result"></span>
                         </div>
                         <div class="col-sm-12 d-flex justify-content-center mt-2">
-                            <input type="text" id="answerTxt" class="bg-dark text-white w-75 text-monospace"
+                            <input type="text" id="answerTxt" class="bg-dark text-white w-50 text-monospace"
                                 value="[Hack@Har ~]$ ">
                         </div>
                         <div class="col-sm-12 d-flex justify-content-center mt-2 mb-5">
-                            <input class="btn btn-outline-info w-75" type="button" id="btnContinue"
-                                value="Continuar" onclick="checkAnswer()">
+                            <input class="btn btn-outline-info w-50 btn-continue" type="button" id="btnContinue"
+                                value="Continuar" onclick="checkAnswer(), subir()">
                         </div>
                     </div>
                 </div>
@@ -104,33 +110,34 @@
         </div>
     </div>
 
-    <div class="container mt-5 hide" id="game_choice">
+    <div class="container mt-5 hide mb-4" id="game_choice">
         <div class="container">
             <div class="row d-flex justify-content-center">
-                <h6 class="text-danger text-center mt-4">Hora de escolher!</h6>
+                <h6 class="text-danger text-center mt-4">HORA DE ESCOLHER!</h6>
             </div>
-            <div class="row mt-3 d-flex justify-content-center">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" id="card-image" src=""
-                        alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title text-center" id="card-title"></h5>
-                        <p class="card-text text-justify" id="card-text"></p>
+            <div class="row mt-3">
+                <div class="col-sm-12 col-md-6 text-center">
+                    <img class="card-img-top" src="" alt="Card image cap" id="card-image">
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <div class="container d-flex h-100 bg-text text-center">
+                        <div class="row justify-content-center align-self-center">
+                            <h5 class="card-title text-center" id="card-title"></h5>
+                            <p class="card-text text-justify" id="card-text"></p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row d-flex justify-content-center mt-5">
+            <div class="row d-flex justify-content-center mt-5 space">
                 <h5 class="text-white text-justify">Qual sua decisão?</h5>
             </div>
             <div class="row">
                 <div class="container">
-                    <div class="col-sm-12 d-flex justify-content-center mt-2">
+                    <div class="col-sm-12 d-flex justify-content-center mt-2 mb-4">
                         <input class="btn btn-outline-info w-75" type="button" id="btn1"
-                            onclick="chooseOption(this.value)">
-                    </div>
-                    <div class="col-sm-12 d-flex justify-content-center mt-2 mb-5">
+                            onclick="chooseOption(this.value), subir()">
                         <input class="btn btn-outline-info w-75" type="button" id="btn2"
-                            onclick="chooseOption(this.value)">
+                            onclick="chooseOption(this.value), subir()">
                     </div>
                 </div>
             </div>
