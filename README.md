@@ -10,7 +10,7 @@
 "Yamato's Future - An Interactive Story Game" é um jogo de decisão feito para ser integrado ao ["E-nology"](https://github.com/andersonmag/E-nology-POWERFULL) como um minigame.
 
 ## :speech_balloon: Description/Descrição
-<pre>
+
 In this game, you make the decisions for Yamato, a budding hacker who dreams of being remembered as a legend.
 
 Note: Before making any decision, you must answer a question related to programming or basic computer knowledge.
@@ -19,10 +19,8 @@ Note: Before making any decision, you must answer a question related to programm
 
 Neste jogo você decide as ações de Yamato, um hacker iniciante que sonha em ser lembrado como uma lenda.
 
-Detalhe: antes de fazer cada decisão, você deve responder a uma pergunta relacionada ao tema programação ou conhecimento 
+Detalhe: antes de fazer decisões, você deve responder a uma pergunta relacionada ao tema programação ou informática.
 
-básico de informática.
-</pre>
 
 ## :computer: Check out the project / Visualize online
 [Click Here / Clique aqui](https://jackwh0.github.io/Yamato-s-Future/)
