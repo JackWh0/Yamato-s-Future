@@ -21,6 +21,9 @@ Neste jogo você decide as ações de Yamato, um hacker iniciante que sonha em s
 
 Detalhe: antes de fazer decisões, você deve responder a uma pergunta relacionada ao tema programação ou informática.
 
+## :computer: Decision Tree / Árvore de decisões
+![Arvore_de_Decisao](https://user-images.githubusercontent.com/48254551/123558852-e39ca380-d76e-11eb-95fc-02cf47fd57c0.jpg)
+
 
 ## :computer: Check out the project / Visualize online
 [Click Here / Clique aqui](https://jackwh0.github.io/Yamato-s-Future/)
