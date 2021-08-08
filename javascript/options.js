@@ -2,27 +2,37 @@ const questions = [
   {
     questionMessage: '[JS] Digite o nome da função que mostra uma mensagem na tela do usuário',
     questionImage: 'images/alert.png',
-    questionAnswer: 'alert'
+    questionAnswer: 'alert',
+    hintDescription: 'A resposta começa com "A"',
+    hintAnswer: '_LER_'
   },
   {
     questionMessage: 'Qual termo em inglês usado para denominar partes físicas do computador?',
     questionImage: 'images/hardware.jpg',
-    questionAnswer: 'hardware'
+    questionAnswer: 'hardware',
+    hintDescription: 'Teclado, mouse e monitor são exemplos de...',
+    hintAnswer: 'H_RD_A_E'
   },
   {
     questionMessage: '[Js] Quando quero mostrar uma mensagem no console do browser, eu uso...?',
     questionImage: 'images/console.png',
-    questionAnswer: 'console.log'
+    questionAnswer: 'console.log',
+    hintDescription: 'A resposta é...',
+    hintAnswer: 'cons_l_.log'
   },
   {
     questionMessage: '[Js] Qual propriedade de uma String é usada para ver o comprimento de uma palavra/frase?',
     questionImage: 'images/length.png',
-    questionAnswer: 'length'
+    questionAnswer: 'length',
+    hintDescription: 'A resposta é "comprimento" em inglês',
+    hintAnswer: 'L_NG_H'
   },
   {
     questionMessage: 'Qual termo em inglês é usado para se referir a um erro não esperado nos códigos?',
     questionImage: 'images/bug.jpg',
-    questionAnswer: 'bug'
+    questionAnswer: 'bug',
+    hintDescription: 'A resposta é uma das formas de dizer "besouro" em inglês',
+    hintAnswer: 'B_G'
   }
 ]
 

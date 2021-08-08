@@ -8,6 +8,7 @@
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <title>Yamato's Future</title>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body style="background-color: black;">
@@ -49,7 +50,7 @@
             <div class="container">
                 <div class="row d-flex justify-content-center mt-3 mb-5">
                     <input type="button" value="</Continuar>" class="btn btn-light w-75 btn-continue"
-                        onclick="startGame(), subir()">
+                        onclick="startGame(), up()">
                 </div>
             </div>
         </div>
@@ -75,7 +76,7 @@
                 </div>
                 <div class="row mt-4 d-flex justify-content-center space">
                     <input class="btn btn-outline-info w-50" id="btn-resume" type="button" value="Continuar"
-                        onclick="hideResume(), subir()">
+                        onclick="hideResume(), up()">
                 </div>
             </div>
             <div id="question" class="hide">
@@ -94,15 +95,12 @@
                 <div class="row mt-4">
                     <div class="container">
                         <div class="col-sm-12 d-flex justify-content-center mt-2">
-                            <span class="hide text-center text-warning" id="result"></span>
-                        </div>
-                        <div class="col-sm-12 d-flex justify-content-center mt-2">
                             <input type="text" id="answerTxt" class="bg-dark text-white w-50 text-monospace"
                                 value="[Hack@Har ~]$ ">
                         </div>
                         <div class="col-sm-12 d-flex justify-content-center mt-2 mb-5">
                             <input class="btn btn-outline-info w-50 btn-continue" type="button" id="btnContinue"
-                                value="Continuar" onclick="checkAnswer(), subir()">
+                                value="Continuar" onclick="checkAnswer(), up()">
                         </div>
                     </div>
                 </div>
@@ -135,14 +133,43 @@
                 <div class="container">
                     <div class="col-sm-12 d-flex justify-content-center mt-2 mb-4">
                         <input class="btn btn-outline-info w-75" type="button" id="btn1"
-                            onclick="chooseOption(this.value), subir()">
+                            onclick="chooseOption(this.value), up()">
                         <input class="btn btn-outline-info w-75" type="button" id="btn2"
-                            onclick="chooseOption(this.value), subir()">
+                            onclick="chooseOption(this.value), up()">
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="hintModal" tabindex="-1" role="dialog" aria-labelledby="hintModal"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content" style="background-color: #2c2f33;"> 
+                <div class="row d-flex justify-content-center p-2">
+                    <h5 class="modal-title text-white" id="exampleModalLongTitle">
+                        <i class="fa fa-lightbulb-o text-warning" aria-hidden="true"></i> 
+                        HINT 
+                        <i class="fa fa-lightbulb-o text-warning" aria-hidden="true"></i>
+                    </h5>
+                </div>
+                <div class="row text-center text-white p-4">
+                    <div class="col-12">
+                        <p id="hintDescription"></p>
+                    </div>
+                    <div class="col-12">
+                        <p id="hintAnswer"></p>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center pb-3">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">UNDERSTOOD</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
     <script src="javascript/options.js" type="text/javascript"></script>
     <script src="javascript/index.js" type="text/javascript"></script>
 </body>
